@@ -430,7 +430,8 @@ openshift_use_dnsmasq=true
 openshift_master_default_subdomain=$ROUTING
 openshift_override_hostname_check=true
 osm_use_cockpit=${COCKPIT}
-os_sdn_network_plugin_name='redhat/openshift-ovs-multitenant'
+#os_sdn_network_plugin_name='redhat/openshift-ovs-multitenant'
+os_sdn_network_plugin_name='redhat/openshift-ovs-subnet'
 console_port=443
 openshift_cloudprovider_kind=azure
 osm_default_node_selector='type=app'
