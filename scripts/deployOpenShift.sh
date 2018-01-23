@@ -256,8 +256,8 @@ cat > /home/${SUDOUSER}/setup-azure-master.yml <<EOF
           "location": "{{ lookup('env','LOCATION') }}"
         } 
     notify:
-    - restart atomic-openshift-master
-
+    - restart atomic-openshift-master-controllers
+    - restart atomic-openshift-master-api
 
   - name: insert the azure disk config into the master
     modify_yaml:
@@ -281,7 +281,8 @@ cat > /home/${SUDOUSER}/setup-azure-master.yml <<EOF
       value:
       - azure
     notify:
-    - restart atomic-openshift-master
+    - restart atomic-openshift-master-controllers
+    - restart atomic-openshift-master-api
 EOF
 
 # Create Azure Cloud Provider configuration Playbook for Node Config (Master Nodes)
