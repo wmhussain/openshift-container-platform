@@ -444,7 +444,7 @@ openshift_registry_selector='type=infra'
 openshift_master_cluster_method=native
 openshift_master_cluster_hostname=$MASTERPUBLICIPHOSTNAME
 #openshift_master_cluster_public_hostname=$MASTERPUBLICIPHOSTNAME
-openshift_master_cluster_public_hostname=master.ocp.osslabs.co.in
+openshift_master_cluster_public_hostname=master.$ROUTING
 openshift_master_cluster_public_vip=$MASTERPUBLICIPADDRESS
 
 # Enable HTPasswdPasswordIdentityProvider
