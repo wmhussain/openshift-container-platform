@@ -1,0 +1,10 @@
+deployed the cluster without below projects and with custom doamin...
+
+logging
+ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/openshift-cluster/openshift-logging.yml -e openshift_logging_install_logging=True -e openshift_hosted_logging_storage_kind=dynamic
+
+metrics
+ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/openshift-cluster/openshift-metrics.yml -e openshift_metrics_install_metrics=True -e openshift_metrics_cassandra_storage_type=dynamic
+
+disabled service broker and did manual plabook installation
+ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/openshift-cluster/service-catalog.yml
