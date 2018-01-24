@@ -125,7 +125,7 @@
 		},
 		"dataDiskSize": {
 			"type": "int",
-			"defaultValue": 64,
+			"defaultValue": 1024,
 			"allowedValues": [32, 64, 128, 256, 512, 1024, 2048],
 			"metadata": {
 				"description": "Size of Datadisk in GB for Docker volume"
